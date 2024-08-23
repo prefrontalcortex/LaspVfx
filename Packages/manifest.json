@@ -1,5 +1,6 @@
 {
   "scopedRegistries": [],
+  "dependencies": {
     "com.unity.mathematics": "1.2.1",
     "com.unity.ai.navigation": "1.1.5",
     "com.unity.collections": "2.4.3",
