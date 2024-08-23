@@ -2,10 +2,10 @@ using UnityEngine;
 using UnityEngine.VFX;
 using UnityEngine.VFX.Utility;
 
-namespace Lasp.Vfx
+namespace UnityVFXReactiveAudio.Vfx
 {
-    [AddComponentMenu("VFX/Property Binders/LASP/Audio Level Binder")]
-    [VFXBinder("LASP/Audio Level")]
+    [AddComponentMenu("VFX/Property Binders/UnityVFXReactiveAudio/Audio Level Binder")]
+    [VFXBinder("UnityVFXReactiveAudio/Audio Level")]
     sealed class VFXAudioLevelBinder : VFXBinderBase
     {
         public string Property
@@ -14,7 +14,7 @@ namespace Lasp.Vfx
         [VFXPropertyBinding("System.Single"), SerializeField]
         ExposedProperty _property = "AudioLevel";
 
-        public Lasp.AudioLevelTracker Target = null;
+        public AudioLevelTracker Target = null;
 
         public override bool IsValid(VisualEffect component)
           => Target != null && component.HasFloat(_property);

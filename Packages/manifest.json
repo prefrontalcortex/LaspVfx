@@ -1,24 +1,11 @@
 {
-  "scopedRegistries": [
-    {
-      "name": "Unity NuGet",
-      "url": "https://unitynuget-registry.azurewebsites.net",
-      "scopes": [
-        "org.nuget"
-      ]
-    },
-    {
-      "name": "Keijiro",
-      "url": "https://registry.npmjs.com",
-      "scopes": [
-        "jp.keijiro"
-      ]
-    }
-  ],
-  "dependencies": {
-    "com.unity.render-pipelines.high-definition": "10.6.0",
-    "org.nuget.system.memory": "4.5.3",
-    "jp.keijiro.klak.motion": "1.0.2",
+  "scopedRegistries": [],
+    "com.unity.mathematics": "1.2.1",
+    "com.unity.ai.navigation": "1.1.5",
+    "com.unity.collections": "2.4.3",
+    "com.unity.ide.rider": "3.0.31",
+    "com.unity.render-pipelines.high-definition": "14.0.11",
+    "com.pfc.unityvfxreactiveaudio": "1.1.0",
     "com.unity.modules.animation": "1.0.0",
     "com.unity.modules.imageconversion": "1.0.0",
     "com.unity.modules.physics": "1.0.0",

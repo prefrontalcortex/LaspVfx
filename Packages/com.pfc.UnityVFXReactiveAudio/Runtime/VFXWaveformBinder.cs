@@ -3,10 +3,10 @@ using UnityEngine;
 using UnityEngine.VFX;
 using UnityEngine.VFX.Utility;
 
-namespace Lasp.Vfx
+namespace UnityVFXReactiveAudio.Vfx
 {
-    [AddComponentMenu("VFX/Property Binders/LASP/Waveform Binder")]
-    [VFXBinder("LASP/Waveform")]
+    [AddComponentMenu("VFX/Property Binders/UnityVFXReactiveAudio/Waveform Binder")]
+    [VFXBinder("UnityVFXReactiveAudio/Waveform")]
     sealed class VFXWaveformBinder : VFXBinderBase
     {
         #region VFX Binder Implementation
@@ -35,7 +35,7 @@ namespace Lasp.Vfx
         [VFXPropertyBinding("System.UInt32"), SerializeField]
         ExposedProperty _sampleCountProperty = "SampleCount";
 
-        public Lasp.AudioLevelTracker Target = null;
+        public AudioLevelTracker Target = null;
 
         public override bool IsValid(VisualEffect component)
           => Target != null &&
@@ -97,9 +97,11 @@ namespace Lasp.Vfx
 
             var slice = Target.audioDataSlice;
             _sampleCount = Mathf.Min(_buffer.Length, slice.Length);
-
+            
             if (_sampleCount > 0)
             {
+                if (slice.Length > _sampleCount)
+                    slice = new NativeSlice<float>(slice, 0, _sampleCount);
                 slice.CopyTo(_buffer.GetSubArray(0, _sampleCount));
                 _texture.LoadRawTextureData(_buffer);
                 _texture.Apply();

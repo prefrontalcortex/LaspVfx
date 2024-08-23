@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.VFX;
 using UnityEngine.VFX.Utility;
 
-namespace Lasp.Vfx
+namespace UnityVFXReactiveAudio.Vfx
 {
     [AddComponentMenu("VFX/Property Binders/LASP/Spectrum Binder")]
     [VFXBinder("LASP/Spectrum")]
@@ -27,7 +27,7 @@ namespace Lasp.Vfx
         [VFXPropertyBinding("System.UInt32"), SerializeField]
         ExposedProperty _resolutionProperty = "Resolution";
 
-        public Lasp.SpectrumToTexture Target = null;
+        public SpectrumToTexture Target = null;
 
         public override bool IsValid(VisualEffect component)
           => Target != null &&

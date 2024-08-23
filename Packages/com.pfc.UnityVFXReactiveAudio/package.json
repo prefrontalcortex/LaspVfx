@@ -1,0 +1,16 @@
+{
+    "author": "prefrontalcortex",
+  "dependencies": {
+    "com.unity.mathematics": "1.2.1",
+    "com.unity.collections": "2.4.0"
+     },
+    "description": "Fork from Keijiro Takahashi's LASP and LASPVFX to support Unity Audio",
+    "displayName": "UnityVFXReactiveAudio",
+    "keywords": [ "unity" ],
+    "license": "Unlicense",
+    "name": "com.pfc.unityvfxreactiveaudio",
+    "repository": "github:prefrontalcortex/UnityVFXReactiveAudio",
+    "unity": "2019.3",
+    "unityRelease": "0f1",
+    "version": "1.0.2"
+}

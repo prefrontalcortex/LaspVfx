@@ -1,10 +1,14 @@
 {
-    "name": "LaspVfx.Runtime",
+    "name": "UnityVFXReactiveAudio.Editor",
+    "rootNamespace": "",
     "references": [
-        "GUID:d04eb9c554ad44ceab303cecf0c0cf82",
-        "GUID:e438a90965872694392541e22197078e"
+        "GUID:2665a8d13d1b3f18800f46e256720795",
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:c05c516dd74da56478d8bb21296089f4"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
